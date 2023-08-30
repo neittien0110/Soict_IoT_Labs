@@ -1,0 +1,11 @@
+practice KEYWORD1
+lab   KEYWORD1
+iot KEYWORD1
+subject   KEYWORD1
+hocphan KEYWORD1
+monhoc  KEYWORD1
+nhapmon KEYWORD1
+cntt    KEYWORD1
+thuchanh KEYWORD1
+laboratory    KEYWORD2
+SOICT   KEYWORD2
