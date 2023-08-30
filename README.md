@@ -24,6 +24,11 @@
 - Chạy thử nghiệm và quan sát kết quả
 - Hiệu chỉnh tham số và quan sát kết quả
 
+## Lời cảm ơn
+
+- Nhiều bài tập được tham khảo hoặc dẫn xuất trực tiếp từ các ví dụ của nhà sản xuất [Keyestudio] <https://wiki.keyestudio.com/KS0085_Keyestudio_Smart_Home_Kit_for_Arduino>
+
+
 ## Liên hệ
 
 Thư viện được soạn bởi nhóm chuyên môn học phần Nhập môn Công nghệ Thông tin và Truyền thông, Trường Công nghệ Thông tin và Truyền thông, Đại học Bách khoa Hà Nội.
