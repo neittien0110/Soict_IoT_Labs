@@ -20,14 +20,17 @@
 ## Sử dụng nhanh
 
 - Cài đặt thư viện **SOICT IoT Labs**.
+
+  ![install lib](images/installlib.png)
 - Mở phần **Examples**, và lần lượt từng ví dụ theo từ dễ tới khó theo số thứ tự
+
+  ![open cases](images/opencases.png)
 - Chạy thử nghiệm và quan sát kết quả
 - Hiệu chỉnh tham số và quan sát kết quả
 
 ## Lời cảm ơn
 
 - Nhiều bài tập được tham khảo hoặc dẫn xuất trực tiếp từ các ví dụ của nhà sản xuất [Keyestudio] <https://wiki.keyestudio.com/KS0085_Keyestudio_Smart_Home_Kit_for_Arduino>
-
 
 ## Liên hệ
 
