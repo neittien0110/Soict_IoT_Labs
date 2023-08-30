@@ -1,5 +1,16 @@
 # SOICT IOT LABs
 
+- [Giới thiệu chung](#giới-thiệu-chung)
+- [Môi trường hoạt động](#môi-trường-hoạt-động)
+- [Cài đặt thư viện](#cài-đặt-thư-viện)
+  - [Cài đặt thư viện với Arduino IDE phiên bản Desktop](#cài-đặt-thư-viện-với-arduino-ide-phiên-bản-desktop)
+  - [Cài đặt lib với bản Arduino IDE online](#cài-đặt-lib-với-bản-arduino-ide-online)
+- [Biên dịch và nạp chương trình lên board Arduino](#biên-dịch-và-nạp-chương-trình-lên-board-arduino)
+  - [Biên dịch và nạp chương trình với Arduino IDE phiên bản Desktop](#biên-dịch-và-nạp-chương-trình-với-arduino-ide-phiên-bản-desktop)
+  - [Biên dịch và nạp chương trình với Arduino IDE online](#biên-dịch-và-nạp-chương-trình-với-arduino-ide-online)
+- [Lời cảm ơn](#lời-cảm-ơn)
+- [Liên hệ](#liên-hệ)
+
 ## Giới thiệu chung
 
 - Là bộ thư viện mã nguồn dành các bài thực hành của học phần **IT2000 - Nhập môn Công nghệ Thông tin**.
@@ -17,7 +28,11 @@
 - Thiết bị: Arduino Uno với bộ khung nhà thông minh *keyestudio smart home kit*   và xe tự hành *Alphabot*
 - Kết nối với **Hệ thống dữ liệu trung tâm SOICT IOT HUB <http://siot.soict.ai>
 
-## Sử dụng nhanh
+## Cài đặt thư viện
+
+### Cài đặt thư viện với Arduino IDE phiên bản Desktop
+
+*Nếu sử dụng [Arduino IDE online](https://create.arduino.cc/editor) thì xem hướng dẫn [ở đây](#cài-đặt-lib-với-bản-arduino-ide-online)*
 
 - Cài đặt thư viện **SOICT IoT Labs**.
 
@@ -27,6 +42,49 @@
   ![open cases](images/opencases.png)
 - Chạy thử nghiệm và quan sát kết quả
 - Hiệu chỉnh tham số và quan sát kết quả
+
+### Cài đặt lib với bản Arduino IDE online
+
+1. Mở [Arduino IDE online](https://create.arduino.cc/editor)
+
+   ![Alt text](images/openonline.png)
+
+2. Bấm **NEW SKETCH** để tạo dự án mới. Xem ảnh trên.
+
+3. Click vào dropdown box **Select Other Board and Port**
+
+   ![Alt text](images/selectboard.png)
+4. Chọn đúng loại board đang sử dụng **Arduino UNO**. Bấm **OK**
+
+   ![Alt text](images/uno.png)
+
+5. Ở menu trái, chọn **Libraries**
+
+   ![Alt text](images/librariesitem.png)
+
+6. Ở menu trái mở rộng, bấm **LIBRARY MANAGER**
+
+   ![Alt text](images/librarybutton.png)
+
+7. Trong giao diện **Favorite the Contributed libraries you use the most**, tìm thư viện **SOICT_IOT_LABS**.
+   Bấm biểu tượng **Star** tương ứng ở cùng dòng với thư viện.
+   Sau cùng, bấm **Done**.
+
+   ![Alt text](images/searchlib.png)
+
+8. Vẫn ở menu trái **Libraries**,  trong menu mở rộng ở tab **FAVOURITES**, đã hiện ra thư viện  **SOICT_IOT_LABS**. Bấm **Examples** và bấm vào từng ví dụ để mở ra các dự án SKETCH mới và có thể chạy được luôn
+
+   ![Alt text](images/opencases2.png)
+
+## Biên dịch và nạp chương trình lên board Arduino
+
+### Biên dịch và nạp chương trình với Arduino IDE phiên bản Desktop
+
+Xem [liên kết ngoài](http://arduino.vn/bai-viet/402-huong-dan-nap-chuong-trinh-don-gian-cho-arduino-uno-r3).
+
+### Biên dịch và nạp chương trình với Arduino IDE online
+
+Xem [liên kết ngoài](http://arduino.vn/tutorial/1333-lap-trinh-arduino-tren-may-voi-arduino-create-su-thay-tam-thoi-cho-codebender).
 
 ## Lời cảm ơn
 
