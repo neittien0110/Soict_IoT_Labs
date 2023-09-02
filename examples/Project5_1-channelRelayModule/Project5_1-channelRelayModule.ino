@@ -10,6 +10,7 @@
    lượng ngoài, chứ không phải là do Arduino cung cấp nữa.
    Kit phát triển: 
     - Keyestudio smart home Kit for Arduino
+    - Module nút bấm
     - Module đèn led
     - Module rơ le 1 kênh (1-channel relay)
    
@@ -36,7 +37,10 @@ void setup () {
  * -----------------------------------------------------------------------------------------------
 */
 void loop () {
-  pinMode (13, OUTPUT); // Set Pin13 as output
-  digitalWrite (13, HIGH); // Set Pin13 High
-  pinMode (Relay, OUTPUT); // Set Pin12 as output
+  val = digitalRead (inpin); // Read the digital 4 level value and assign it to val
+  if (val == LOW) {// Whether the key is pressed, the light will be on when pressed
+    digitalWrite (ledpin, HIGH);
+  } else {
+    digitalWrite (ledpin, LOW);
+  }
 }
