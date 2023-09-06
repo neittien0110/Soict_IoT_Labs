@@ -15,7 +15,7 @@
 
 - Là bộ thư viện mã nguồn dành các bài thực hành của học phần **IT2000 - Nhập môn Công nghệ Thông tin**.
 - Mục tiêu: đem lại trải nghiệm và cảm nhận đầu tiên về lĩnh vực IoT cũng như khả năng ứng dụng, mối quan hệ với big data, cloud computing, cũng như các hướng nghiên cứu khác.
-- Nhiệm vụ đối với các sinh viên: triển khai, phân tích ưu nhược điểm của các bài lab, thay đổi và tham số và đưa ra ý tưởng phát triển mới.
+- Nhiệm vụ đối với các sinh viên: nạp mã nguồn; trải nghiệm bài lab; phân tích ưu nhược điểm các cảm biến/cơ cấu chấp hành;  thấy được mối tương quan, tính liền mạch, xâu chuỗi giữa các mảng công nghệ IoT, cloud, webapi, bigdata, AI; và đưa ra ý tưởng phát triển mới.
 
 ## Môi trường hoạt động
 
