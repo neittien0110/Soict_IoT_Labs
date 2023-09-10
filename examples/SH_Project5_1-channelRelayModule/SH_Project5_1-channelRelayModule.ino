@@ -37,10 +37,8 @@ void setup () {
  * -----------------------------------------------------------------------------------------------
 */
 void loop () {
-  val = digitalRead (inpin); // Read the digital 4 level value and assign it to val
-  if (val == LOW) {// Whether the key is pressed, the light will be on when pressed
-    digitalWrite (ledpin, HIGH);
-  } else {
-    digitalWrite (ledpin, LOW);
-  }
+  digitalWrite (Relay, HIGH); // Turn off relay
+  delay (2000);
+  digitalWrite (Relay, LOW); // Turn on relay
+  delay (2000);
 }
