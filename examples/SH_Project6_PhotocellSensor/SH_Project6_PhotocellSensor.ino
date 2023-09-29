@@ -35,8 +35,10 @@ void setup () {
 */
 void loop () {
   val = analogRead (A1); // Read the voltage value of A1 Pin
-  if (val <900)
-  {// Less than 900, LED light is off
+  // Gửi kết quả về máy tính
+  Serial.println(val);
+  if (val <500)
+  {// Less than 500, LED light is off
     digitalWrite (LED, LOW);
   }  else   {
     // Otherwise, the LED lights up
