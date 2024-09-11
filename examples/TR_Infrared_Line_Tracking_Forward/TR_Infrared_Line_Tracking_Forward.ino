@@ -14,7 +14,7 @@ AlphaBot Car1 = AlphaBot();
 TRSensors trs =   TRSensors(); 
 unsigned int sensorValues[NUM_SENSORS]; 
 int time = 500;
-int threshold = 500;
+int threshold = 3000;
 
 void setup() 
 {
@@ -67,8 +67,8 @@ void loop()
    }
 
    delay(1000);
-   if (centerValue < threshold && rightValue1 > threshold && rightValue2 > threshold && leftValue1 > threshold && leftValue2 > threshold) { // nếu cảm biến ở giữa nhận được ánh sáng
-      Car1.Forward(time);  // robot di chuyển thẳng
+   if (centerValue < threshold && rightValue1 > threshold && rightValue2 > threshold && leftValue1 > threshold && leftValue2 > threshold) { 
+      Car1.Forward(time);  /
       Serial.println("Forward");
     }
     else{
