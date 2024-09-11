@@ -36,16 +36,58 @@ TRSensors::TRSensors()
 	
 	for(int i=0;i<_numSensors;i++)
 	{
-		calibratedMin[i] = 1023;
+		calibratedMin[i] = 4095;
 		calibratedMax[i] = 0;
 	}
 }
 
 
-// Reads the sensor values using TLC1543 ADC chip into an array. 
+// Reads the sensor values using TLC1543 or TLC2543 ADC chip into an array. 
 // The values returned are a measure of the reflectance in abstract units,
 // with higher values corresponding to lower reflectance (e.g. a black
 // surface or a void).
+//-TLC1543 Old ver Alphabot
+// void TRSensors::AnalogRead(unsigned int *sensor_values)
+// {
+// 	char i,j;
+// 	unsigned int channel = 0;
+// 	unsigned int values[] = {0,0,0,0,0,0};
+
+// 	for(j = 0;j < _numSensors + 1;j++)
+// 	{
+// 		digitalWrite(CS,LOW);
+// 		for(i = 0;i < 10;i++) 
+// 		{
+// 			//0 to 4 clock transfer channel address
+// 			if((i < 4) && (j >> (3 - i) & 0x01)) 
+// 			digitalWrite(Address,HIGH);
+// 			else
+// 			digitalWrite(Address,LOW);
+
+// 			//0 to 10 clock receives the previous conversion result
+// 			values[j] <<= 1;
+// 			if(digitalRead(DataOut)) 
+// 			values[j] |= 0x01;
+// 			digitalWrite(Clock,HIGH);
+// 			digitalWrite(Clock,LOW);
+// 		}
+// 		//sent 11 to 16 clock 
+// 		for(i = 0;i < 6;i++)
+// 		{
+// 			digitalWrite(Clock,HIGH);
+// 			digitalWrite(Clock,LOW);
+// 		}
+
+// 		digitalWrite(CS,HIGH);
+// 	}
+
+// 	for(i = 0;i < _numSensors;i++)
+// 	{
+// 		sensor_values[i] = values[i+1];
+// 	}
+// }
+
+//TLC2543C New Alphabot
 void TRSensors::AnalogRead(unsigned int *sensor_values)
 {
 	char i,j;
@@ -54,11 +96,13 @@ void TRSensors::AnalogRead(unsigned int *sensor_values)
 
 	for(j = 0;j < _numSensors + 1;j++)
 	{
+    digitalWrite(CS,HIGH);
+    delayMicroseconds(3);
 		digitalWrite(CS,LOW);
-		for(i = 0;i < 10;i++)
+		for(i = 0;i < 12;i++) 
 		{
 			//0 to 4 clock transfer channel address
-			if((i < 4) && (j >> (3 - i) & 0x01))
+			if((i < 4) && (j >> (3 - i) & 0x01)) 
 			digitalWrite(Address,HIGH);
 			else
 			digitalWrite(Address,LOW);
@@ -71,11 +115,15 @@ void TRSensors::AnalogRead(unsigned int *sensor_values)
 			digitalWrite(Clock,LOW);
 		}
 		//sent 11 to 16 clock 
-		for(i = 0;i < 6;i++)
-		{
-			digitalWrite(Clock,HIGH);
-			digitalWrite(Clock,LOW);
-		}
+		// for(i = 0;i < 6;i++)
+		// {
+		// 	digitalWrite(Clock,HIGH);
+		// 	digitalWrite(Clock,LOW);
+		// }
+
+    // wait for conversion time
+    delayMicroseconds(10);
+
 		digitalWrite(CS,HIGH);
 	}
 
@@ -84,6 +132,23 @@ void TRSensors::AnalogRead(unsigned int *sensor_values)
 		sensor_values[i] = values[i+1];
 	}
 }
+
+
+//TLC2543C New Alphabot
+// void TRSensors::AnalogRead(unsigned int *sensor_values){
+//   char i,j;
+//   unsigned int channel = 0;
+//   unsigned int value[] = {0,0,0,0,0,0};
+
+//   for(j = 0; j < _numSensors + 1;j++){
+//     // sent chip select
+//     digitalWrite(CS,HIGH);
+//     delayMicroseconds(3);
+//     digitalWrite(CS,LOW);
+
+
+//   }
+// }
 
 // Reads the sensors 10 times and uses the results for
 // calibration.  The sensor values are not returned; instead, the
@@ -221,21 +286,3 @@ int TRSensors::readLine(unsigned int *sensor_values, unsigned char white_line)
 
 	return last_value;
 }
-
-// Hien
-void TRSensors::readLine2(unsigned int *sensor_values, unsigned char white_line)
-{
-	unsigned char i, on_line = 0;
-
-	readCalibrated(sensor_values);
-  
-	for(i=0;i<_numSensors;i++) {
-		int value = sensor_values[i];
-
-		if(!white_line)
-			value = 1000-value;
-		sensor_values[i] = value;
-		// keep track of whether we see the line at all
-	}
-}
-
