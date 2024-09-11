@@ -13,8 +13,8 @@ AlphaBot Car1 = AlphaBot();
 // sensors 0 through 5 are connected to analog inputs 0 through 5, respectively
 TRSensors trs =   TRSensors(); 
 unsigned int sensorValues[NUM_SENSORS]; 
-int time = 50;
-int threshold = 500;
+int time = 500;
+int threshold = 3000;
 
 void setup() 
 {

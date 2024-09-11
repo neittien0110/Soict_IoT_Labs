@@ -9,7 +9,7 @@ char AlphaBot::RSpeed = DefaultSpeed;
 AlphaBot::AlphaBot()
 {  
   LMotorSpeedPin = 5;             //Left Motor Speed pin (ENA)
-  LMotorForward = A1;             //Motor-L forward (IN1)
+  LMotorForward = A1;             //Motor-L forward (IN1).
   LMotorBackward = A0;            //Motor-L backward (IN2)
   
   RMotorSpeedPin = 6;             //Right Motor Speed pin (ENB)
