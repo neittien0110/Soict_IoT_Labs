@@ -14,7 +14,7 @@ AlphaBot Car1 = AlphaBot();
 TRSensors trs =   TRSensors(); 
 unsigned int sensorValues[NUM_SENSORS]; 
 int time = 500;
-int threshold = 500;
+int threshold = 3000;
 
 void setup() 
 {
