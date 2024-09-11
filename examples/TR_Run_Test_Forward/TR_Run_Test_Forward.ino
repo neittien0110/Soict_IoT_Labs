@@ -4,17 +4,17 @@ Waveshare AlphaBot Car Run Test
 CN: www.waveshare.net/wiki/AlphaBot
 EN: www.waveshare.com/wiki/AlphaBot
 ****************************************/
-#include "AlphaBot.h" // khai bao thu vien Aphabot
+#include "AlphaBot.h" 
 
-AlphaBot Car1 = AlphaBot(); // Khai bao 1 robot AlphaBot
+AlphaBot Car1 = AlphaBot(); 
 
 void setup()
 {
-  Car1.SetSpeed(100);       //Speed:0 - 255 thiet lap toc do cho xe
+  Car1.SetSpeed(100); 
 }
 
 void loop()
 {  
-  //delay(1000);
-  Car1.Forward(1000);     //Car run forward for 1s
+
+  Car1.Forward(1000);  
 }
